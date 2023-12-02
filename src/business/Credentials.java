@@ -16,6 +16,9 @@ public enum Credentials {
 	public Vector2 cTextPanel, cImageViewClone;
 	public RearrangeTypeEnum rearrangeTypeEnumText = RearrangeTypeEnum.LINEAR;
 
+	public Vector2 dMap;
+	public Vector2 cMap;
+
 	private Credentials() {
 
 		double x = 0, y = 0;
@@ -45,6 +48,13 @@ public enum Credentials {
 		x = this.gapBetweenBorders;
 		y = this.gapBetweenBorders;
 		this.cImageViewClone = new Vector2(x, y);
+
+		// d map
+
+		// c map
+
+		x = this.gapBetweenBorders;
+		this.cMap = new Vector2(x, x);
 
 	}
 

@@ -9,7 +9,6 @@ public enum LayerZManager implements IUpdateAble {
 
 	private HashMap<ELayerZ, ArrayList<ImageView>> mapLayerZ = new HashMap<>();
 	private HashMap<ImageView, javafx.scene.image.ImageView> listImageViewsFX = new HashMap<>();
-	private ArrayList<TextIndicator> textIndicators = new ArrayList<>();
 
 	private LayerZManager() {
 
@@ -24,10 +23,6 @@ public enum LayerZManager implements IUpdateAble {
 		this.mapLayerZ.getValue(eLayerZ).addLast(imageView);
 		this.listImageViewsFX.put(imageView, imageViewFX);
 
-	}
-
-	public void addTextIndicator(TextIndicator textIndicator) {
-		this.textIndicators.addLast(textIndicator);
 	}
 
 	public void toFrontImageview(ImageView imageView) {
@@ -94,20 +89,14 @@ public enum LayerZManager implements IUpdateAble {
 	public void update() {
 
 		for (ELayerZ eLayerZ : ELayerZ.values())
+			for (ImageView imageView : this.mapLayerZ.getValue(eLayerZ)) {
 
-			if (eLayerZ.equals(ELayerZ.TEXT))
-				for (TextIndicator textIndicator : this.textIndicators)
-					textIndicator.toFront();
+				if (this.mapLayerZ.getValue(ELayerZ.VISIBILITY_FALSE).contains(imageView))
+					continue;
 
-			else
-				for (ImageView imageView : this.mapLayerZ.getValue(eLayerZ)) {
+				this.listImageViewsFX.getValue(imageView).toFront();
 
-					if (this.mapLayerZ.getValue(ELayerZ.VISIBILITY_FALSE).contains(imageView))
-						continue;
-
-					this.listImageViewsFX.getValue(imageView).toFront();
-
-				}
+			}
 
 	}
 

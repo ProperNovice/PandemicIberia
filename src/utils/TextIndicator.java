@@ -19,7 +19,6 @@ public class TextIndicator implements INode {
 		setHeight(Credentials.INSTANCE.textHeight);
 
 		InstancesGui.INSTANCE.getParent().addNode(this.text);
-		LayerZManager.INSTANCE.addTextIndicator(this);
 
 		this.text.relocate(0, 0);
 
