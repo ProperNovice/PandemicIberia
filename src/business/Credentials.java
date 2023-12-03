@@ -75,9 +75,9 @@ public enum Credentials {
 		// c disease cube supply pile first
 
 		x = this.cMap.x;
-		x += 30;
+		x += 190;
 		y = this.cMap.y;
-		y += 30;
+		y += 25;
 		this.cDiseaseCubeSupplyPileFirst = new Vector2(x, y);
 
 		// c disease cube supply pile second

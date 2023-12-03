@@ -12,8 +12,4 @@ public enum Model {
 		return Flow.INSTANCE.getFlow();
 	}
 
-	protected ListsManager getListsManager() {
-		return ListsManager.INSTANCE;
-	}
-
 }

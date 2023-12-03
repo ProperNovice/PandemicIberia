@@ -1,7 +1,6 @@
 package gameStatesDefault;
 
 import business.Credentials;
-import business.ListsManager;
 import enums.EText;
 import javafx.scene.input.KeyCode;
 import utils.ArrayList;
@@ -77,10 +76,6 @@ public abstract class GameState {
 
 	protected final void concealText() {
 		TextManager.INSTANCE.concealText();
-	}
-
-	protected final ListsManager getListsManager() {
-		return ListsManager.INSTANCE;
 	}
 
 	protected final SelectImageViewManager getSelectImageViewManager() {

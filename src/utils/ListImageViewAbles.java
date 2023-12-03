@@ -1,10 +1,7 @@
 package utils;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
-import business.ListsManager;
-import listCredentials.ListCredentials;
 import utils.Enums.AnimationSynchEnum;
 import utils.Enums.ImageViewActionEnum;
 import utils.Enums.RearrangeTypeEnum;
@@ -16,22 +13,15 @@ public class ListImageViewAbles<T> implements Iterable<T> {
 	private ArrayListImageView<T> arrayList = null;
 	private NumberImageViewIndicator numberImageViewIndicator = new NumberImageViewIndicator();
 	private CoordinatesList<T> coordinates = new CoordinatesList<>(this);
-	private ListCredentials listCredentials = null;
+	private ListCredentials listCredentials = new ListCredentials();
 
 	@SuppressWarnings("unchecked")
-	public ListImageViewAbles(Class<? extends ListCredentials> classListCredentials) {
+	public ListImageViewAbles() {
 
 		this.arrayList = new ArrayListImageView<T>((ListImageViewAbles<IImageViewAble>) this,
 				() -> showListSize());
 
 		ListsManager.INSTANCE.lists.addLast((ListImageViewAbles<IImageViewAble>) this);
-
-		try {
-			this.listCredentials = classListCredentials.getConstructor().newInstance();
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
-		}
 
 		this.arrayList.setCapacity(this.listCredentials.capacity);
 

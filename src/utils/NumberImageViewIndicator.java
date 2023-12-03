@@ -1,6 +1,5 @@
 package utils;
 
-import listCredentials.ListCredentials;
 import utils.Interfaces.IImageViewAble;
 
 public class NumberImageViewIndicator {
@@ -103,7 +102,7 @@ public class NumberImageViewIndicator {
 		if (this.list != null)
 			return;
 
-		this.list = new ListImageViewAbles<>(ListCredentials.class);
+		this.list = new ListImageViewAbles<>();
 
 	}
 

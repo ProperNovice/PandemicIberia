@@ -2,6 +2,7 @@ package business;
 
 import enums.EColor;
 import models.DiseaseCube;
+import models.DiseaseCubesSupplyPiles;
 import models.Map;
 
 public enum InstantiateComponents {
@@ -17,13 +18,14 @@ public enum InstantiateComponents {
 
 	private void diseaseCubes() {
 
-		for (int counter = 1; counter <= 12; counter++)
+		for (int counter = 1; counter <= 24; counter++)
 			for (EColor eColor : EColor.values())
-				ListsManager.INSTANCE.diseaseCubesSupplyPile.getValue(eColor).getArrayList()
-						.addLast(new DiseaseCube(eColor));
+				DiseaseCubesSupplyPiles.INSTANCE.diseaseCubesSupplyPile.getValue(eColor)
+						.getArrayList().addLast(new DiseaseCube(eColor));
 
 		for (EColor eColor : EColor.values())
-			ListsManager.INSTANCE.diseaseCubesSupplyPile.getValue(eColor).relocateImageViews();
+			DiseaseCubesSupplyPiles.INSTANCE.diseaseCubesSupplyPile.getValue(eColor)
+					.relocateImageViews();
 
 	}
 

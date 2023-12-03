@@ -2,7 +2,6 @@ package gui;
 
 import business.Credentials;
 import business.InstantiateComponents;
-import business.ListsManager;
 import gameStates.JUnit;
 import gameStatesDefault.RestartGame;
 import javafx.application.Application;
@@ -27,7 +26,6 @@ public class PandemicIberia extends Application {
 
 	private void start() {
 
-		ListsManager.INSTANCE.instantiate();
 		TextManager.values();
 
 		long start = System.currentTimeMillis();
