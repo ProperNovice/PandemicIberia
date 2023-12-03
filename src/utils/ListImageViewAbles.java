@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import utils.Enums.AnimationSynchEnum;
 import utils.Enums.ImageViewActionEnum;
+import utils.Enums.ListsManager;
 import utils.Enums.RearrangeTypeEnum;
 import utils.Enums.RelocateTypeEnum;
 import utils.Interfaces.IImageViewAble;

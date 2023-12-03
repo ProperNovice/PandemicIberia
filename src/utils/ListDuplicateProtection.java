@@ -1,5 +1,6 @@
 package utils;
 
+import utils.Enums.ListsManager;
 import utils.Interfaces.IImageViewAble;
 
 public enum ListDuplicateProtection {
