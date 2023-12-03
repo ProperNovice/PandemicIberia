@@ -4,6 +4,7 @@ import enums.EColor;
 import lists.DiseaseCubesSupplyPiles;
 import lists.Map;
 import models.DiseaseCube;
+import utils.Enums.ListsManager;
 
 public enum InstantiateComponents {
 
@@ -14,18 +15,19 @@ public enum InstantiateComponents {
 		Map.values();
 		diseaseCubes();
 
+		ListsManager.INSTANCE.saveListsOriginal();
+
 	}
 
 	private void diseaseCubes() {
 
 		for (int counter = 1; counter <= 24; counter++)
 			for (EColor eColor : EColor.values())
-				DiseaseCubesSupplyPiles.INSTANCE.diseaseCubesSupplyPile.getValue(eColor)
-						.getArrayList().addLast(new DiseaseCube(eColor));
+				DiseaseCubesSupplyPiles.INSTANCE.getList(eColor).getArrayList()
+						.addLast(new DiseaseCube(eColor));
 
 		for (EColor eColor : EColor.values())
-			DiseaseCubesSupplyPiles.INSTANCE.diseaseCubesSupplyPile.getValue(eColor)
-					.relocateImageViews();
+			DiseaseCubesSupplyPiles.INSTANCE.getList(eColor).relocateImageViews();
 
 	}
 

@@ -11,7 +11,7 @@ public enum DiseaseCubesSupplyPiles {
 
 	INSTANCE;
 
-	public HashMap<EColor, ListImageViewAbles<DiseaseCube>> diseaseCubesSupplyPile = new HashMap<>();
+	private HashMap<EColor, ListImageViewAbles<DiseaseCube>> list = new HashMap<>();
 
 	private DiseaseCubesSupplyPiles() {
 
@@ -26,7 +26,7 @@ public enum DiseaseCubesSupplyPiles {
 		list.getListCredentials().coordinatesList = Credentials.INSTANCE.cDiseaseCubeSupplyPileFirst;
 		list.getListCredentials().gapBetweenComponents = Credentials.INSTANCE.dGapBetweenDiseaseCubes;
 
-		this.diseaseCubesSupplyPile.put(eColor, list);
+		this.list.put(eColor, list);
 
 		// second
 
@@ -35,7 +35,7 @@ public enum DiseaseCubesSupplyPiles {
 		list.getListCredentials().coordinatesList = Credentials.INSTANCE.cDiseaseCubeSupplyPileSecond;
 		list.getListCredentials().gapBetweenComponents = Credentials.INSTANCE.dGapBetweenDiseaseCubes;
 
-		this.diseaseCubesSupplyPile.put(eColor, list);
+		this.list.put(eColor, list);
 
 		// third
 
@@ -44,7 +44,7 @@ public enum DiseaseCubesSupplyPiles {
 		list.getListCredentials().coordinatesList = Credentials.INSTANCE.cDiseaseCubeSupplyPileThird;
 		list.getListCredentials().gapBetweenComponents = Credentials.INSTANCE.dGapBetweenDiseaseCubes;
 
-		this.diseaseCubesSupplyPile.put(eColor, list);
+		this.list.put(eColor, list);
 
 		// fourth
 
@@ -53,8 +53,12 @@ public enum DiseaseCubesSupplyPiles {
 		list.getListCredentials().coordinatesList = Credentials.INSTANCE.cDiseaseCubeSupplyPileFourth;
 		list.getListCredentials().gapBetweenComponents = Credentials.INSTANCE.dGapBetweenDiseaseCubes;
 
-		this.diseaseCubesSupplyPile.put(eColor, list);
+		this.list.put(eColor, list);
 
+	}
+	
+	public ListImageViewAbles<DiseaseCube> getList(EColor eColor){
+		return this.list.getValue(eColor);
 	}
 
 }
