@@ -1,9 +1,9 @@
 package business;
 
 import enums.EColor;
+import lists.DiseaseCubesSupplyPiles;
+import lists.Map;
 import models.DiseaseCube;
-import models.DiseaseCubesSupplyPiles;
-import models.Map;
 
 public enum InstantiateComponents {
 

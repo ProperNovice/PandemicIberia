@@ -1,7 +1,8 @@
-package models;
+package lists;
 
 import business.Credentials;
 import enums.EColor;
+import models.DiseaseCube;
 import utils.ArrayList;
 import utils.HashMap;
 import utils.ListImageViewAbles;

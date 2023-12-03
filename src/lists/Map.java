@@ -1,4 +1,4 @@
-package models;
+package lists;
 
 import business.Credentials;
 import enums.ELayerZ;
