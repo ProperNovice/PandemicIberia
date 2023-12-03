@@ -18,8 +18,9 @@ public class JUnit extends GameState {
 			city.getListCubes().getArrayList().addLast(DiseaseCubesSupplyPiles.INSTANCE
 					.getList(eCity.getEColor()).getArrayList().removeLast());
 
-			city.getListCubes().getArrayList().addLast(DiseaseCubesSupplyPiles.INSTANCE
-					.getList(eCity.getEColor()).getArrayList().removeLast());
+			if (eCity.isPort())
+				city.getListCubes().getArrayList().addLast(DiseaseCubesSupplyPiles.INSTANCE
+						.getList(eCity.getEColor()).getArrayList().removeLast());
 
 			city.getListCubes().relocateImageViews();
 
