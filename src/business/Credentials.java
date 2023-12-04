@@ -63,7 +63,7 @@ public enum Credentials {
 
 		// d disease cube
 
-		x = 36 - 11;
+		x = 36;
 		this.dDiseaseCube = new Vector2(x, x);
 
 		// d disease cube supply pile gap
@@ -75,9 +75,9 @@ public enum Credentials {
 		// c disease cube supply pile first
 
 		x = this.cMap.x;
-		x += 190;
+		x += 190 - 190;
 		y = this.cMap.y;
-		y += 25;
+		y += 25 - 25;
 		this.cDiseaseCubeSupplyPileFirst = new Vector2(x, y);
 
 		// c disease cube supply pile second

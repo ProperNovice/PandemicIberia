@@ -9,7 +9,32 @@ public enum ECity {
 	BRAGA(EColor.BLUE, false, 310, 481), SALAMANCA(EColor.BLUE, false, 508, 583),
 	PORTO(EColor.BLUE, true, 172, 548), COIMBRA(EColor.BLUE, false, 275, 691),
 	CACERES(EColor.BLUE, false, 428, 797), EVORA(EColor.BLUE, false, 258, 936),
-	LISBOA(EColor.BLUE, true, 112, 904), ALBUFEIRA(EColor.BLUE, true, 208, 1142),;
+	LISBOA(EColor.BLUE, true, 112, 904), ALBUFEIRA(EColor.BLUE, true, 208, 1142),
+	GIJON(EColor.RED, true, 515, 185),
+	SANTANDER(EColor.RED, true, 720, 200),
+	BILBAO_BILBO(EColor.RED, false, 825, 232),
+	SAN_SEBASTIAN_DONOSTIA(EColor.RED, true, 951, 185),
+	HUESCA(EColor.RED, false, 1109, 388),
+	PAMPLONA(EColor.RED, false, 965, 301),
+	VITORIA_GASTEIZ(EColor.RED, false, 860, 352),
+	BURGOS(EColor.RED, false, 736, 379),
+	SORIA(EColor.RED, false, 843, 490),
+	MADRID(EColor.RED, false, 732, 658),
+	VALLADOLID(EColor.RED, false, 617, 480),
+	LEON(EColor.RED, false, 522, 334),
+	ANDORRA_LA_VELLA(EColor.YELLOW, false, 1323, 343),
+	GIRONA(EColor.YELLOW, false, 1470, 428),
+	BARCELONA(EColor.YELLOW, true, 1399, 515),
+	TARRAGONA(EColor.YELLOW, true, 1235, 564),
+	PALMA_DE_MALLORCA(EColor.YELLOW, true, 1401, 776),
+	VALENCIA(EColor.YELLOW, true, 1104, 795),
+	ALICANTE(EColor.YELLOW, true, 1096, 957),
+	CARTAGENA(EColor.YELLOW, true, 1035, 1071),
+	ALBACETE(EColor.YELLOW, false, 941, 870),
+	CUENCA(EColor.YELLOW, false, 911, 715),
+	TERUEL(EColor.YELLOW, false, 1025, 673),
+	ZARAGOZA(EColor.YELLOW, false, 1055, 477),
+	;
 
 	private EColor eColor = null;
 	private boolean isPort;
