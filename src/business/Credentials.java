@@ -17,8 +17,7 @@ public enum Credentials {
 	public RearrangeTypeEnum rearrangeTypeEnumText = RearrangeTypeEnum.LINEAR;
 
 	public Vector2 dMap, dDiseaseCube, dGapBetweenDiseaseCubes;
-	public Vector2 cMap, cDiseaseCubeSupplyPileFirst, cDiseaseCubeSupplyPileSecond,
-			cDiseaseCubeSupplyPileThird, cDiseaseCubeSupplyPileFourth;
+	public Vector2 cMap, cDiseaseCubeSupplyPileFirst, cInfectionDeck, cInfectionDiscardPile;
 
 	private Credentials() {
 
@@ -75,31 +74,26 @@ public enum Credentials {
 		// c disease cube supply pile first
 
 		x = this.cMap.x;
-		x += 190 - 190;
+		x += 190 - 190 + 2;
 		y = this.cMap.y;
-		y += 25 - 25;
+		y += 25 - 25 + 2;
 		this.cDiseaseCubeSupplyPileFirst = new Vector2(x, y);
 
-		// c disease cube supply pile second
+		// c infection deck
 
-		x = cDiseaseCubeSupplyPileFirst.x;
-		y = cDiseaseCubeSupplyPileFirst.y;
-		y += this.dGapBetweenDiseaseCubes.y;
-		this.cDiseaseCubeSupplyPileSecond = new Vector2(x, y);
+		x = this.cMap.x;
+		x += 1373;
+		y = this.cMap.y;
+		y += 143;
+		this.cInfectionDeck = new Vector2(x, y);
 
-		// c disease cube supply pile third
+		// c infection discard pile
 
-		x = cDiseaseCubeSupplyPileSecond.x;
-		y = cDiseaseCubeSupplyPileSecond.y;
-		y += this.dGapBetweenDiseaseCubes.y;
-		this.cDiseaseCubeSupplyPileThird = new Vector2(x, y);
-
-		// c disease cube supply pile fourth
-
-		x = cDiseaseCubeSupplyPileThird.x;
-		y = cDiseaseCubeSupplyPileThird.y;
-		y += this.dGapBetweenDiseaseCubes.y;
-		this.cDiseaseCubeSupplyPileFourth = new Vector2(x, y);
+		x = this.cMap.x;
+		x += 1706;
+		y = this.cMap.y;
+		y += 143;
+		this.cInfectionDiscardPile = new Vector2(x, y);
 
 	}
 

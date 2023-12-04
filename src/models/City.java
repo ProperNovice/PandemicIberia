@@ -8,20 +8,23 @@ import utils.ListImageViewAbles;
 
 public class City {
 
-	private ListImageViewAbles<DiseaseCube> listCubes = new ListImageViewAbles<>();
+	private ListImageViewAbles<DiseaseCube> listDiseaseCubes = new ListImageViewAbles<>();
 
 	public City(ECity eCity) {
 
-		this.listCubes.getListCredentials().coordinatesList = eCity.getCoordinates().clone();
-		this.listCubes.getListCredentials().coordinatesList.addVector2(Credentials.INSTANCE.cMap);
-		this.listCubes.getListCredentials().objectsPerRow = 3;
-		this.listCubes.getListCredentials().relocateTypeEnum = RelocateTypeEnum.CENTER;
-		this.listCubes.getListCredentials().rearrangeTypeEnum = RearrangeTypeEnum.PIVOT;
+		// disease cubes
+
+		this.listDiseaseCubes.getListCredentials().coordinatesList = eCity.getCoordinates().clone();
+		this.listDiseaseCubes.getListCredentials().coordinatesList
+				.addVector2(Credentials.INSTANCE.cMap);
+		this.listDiseaseCubes.getListCredentials().objectsPerRow = 3;
+		this.listDiseaseCubes.getListCredentials().relocateTypeEnum = RelocateTypeEnum.CENTER;
+		this.listDiseaseCubes.getListCredentials().rearrangeTypeEnum = RearrangeTypeEnum.PIVOT;
 
 	}
 
 	public ListImageViewAbles<DiseaseCube> getListCubes() {
-		return this.listCubes;
+		return this.listDiseaseCubes;
 	}
 
 }

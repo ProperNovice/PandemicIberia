@@ -1,8 +1,11 @@
 package business;
 
+import enums.ECity;
 import enums.EColor;
+import lists.DeckInfection;
 import lists.DiseaseCubesSupplyPiles;
 import lists.Map;
+import models.CardInfection;
 import models.DiseaseCube;
 import utils.Enums.ListsManager;
 
@@ -14,8 +17,18 @@ public enum InstantiateComponents {
 
 		Map.values();
 		diseaseCubes();
+		cardInfection();
 
 		ListsManager.INSTANCE.saveListsOriginal();
+
+	}
+
+	private void cardInfection() {
+
+		for (ECity eCity : ECity.values())
+			DeckInfection.INSTANCE.getList().getArrayList().addLast(new CardInfection(eCity));
+
+		DeckInfection.INSTANCE.getList().relocateImageViews();
 
 	}
 
