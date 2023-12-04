@@ -16,8 +16,9 @@ public enum Credentials {
 	public Vector2 cTextPanel, cImageViewClone;
 	public RearrangeTypeEnum rearrangeTypeEnumText = RearrangeTypeEnum.LINEAR;
 
-	public Vector2 dMap, dDiseaseCube, dGapBetweenDiseaseCubes;
-	public Vector2 cMap, cDiseaseCubeSupplyPileFirst, cInfectionDeck, cInfectionDiscardPile;
+	public Vector2 dMap, dDiseaseCube, dGapBetweenDiseaseCubes, dRailroadToken;
+	public Vector2 cMap, cDiseaseCubeSupplyPileFirst, cInfectionDeck, cInfectionDiscardPile,
+			cRailroadTokensPile;
 
 	private Credentials() {
 
@@ -94,6 +95,20 @@ public enum Credentials {
 		y = this.cMap.y;
 		y += 143;
 		this.cInfectionDiscardPile = new Vector2(x, y);
+
+		// c railroad tokens pile
+
+		x = this.cMap.x + 2;
+		y = this.dFrame.y;
+		y -= this.gapBetweenBorders;
+		y -= 2;
+		this.cRailroadTokensPile = new Vector2(x, y);
+
+		// d railroad token
+
+		x = this.dDiseaseCube.x;
+		x += 6;
+		this.dRailroadToken = new Vector2(x, x);
 
 	}
 

@@ -5,8 +5,10 @@ import enums.EColor;
 import lists.DeckInfection;
 import lists.DiseaseCubesSupplyPiles;
 import lists.Map;
+import lists.RailroadTokensPile;
 import models.CardInfection;
 import models.DiseaseCube;
+import models.RailroadToken;
 import utils.Enums.ListsManager;
 
 public enum InstantiateComponents {
@@ -18,8 +20,18 @@ public enum InstantiateComponents {
 		Map.values();
 		diseaseCubes();
 		cardInfection();
+		railroadTokens();
 
 		ListsManager.INSTANCE.saveListsOriginal();
+
+	}
+
+	private void railroadTokens() {
+
+		for (int counter = 1; counter <= 10; counter++)
+			RailroadTokensPile.INSTANCE.getList().getArrayList().addFirst(new RailroadToken());
+
+		RailroadTokensPile.INSTANCE.getList().relocateImageViews();
 
 	}
 

@@ -2,23 +2,43 @@ package lists;
 
 import enums.ECity;
 import models.City;
-import utils.HashMap;
+import utils.ArrayList;
+import utils.ShutDown;
 
 public enum Cities {
 
 	INSTANCE;
 
-	private HashMap<ECity, City> list = new HashMap<>();
+	private ArrayList<CityToken> list = new ArrayList<>();
 
 	private Cities() {
 
 		for (ECity eCity : ECity.values())
-			this.list.put(eCity, new City(eCity));
+			this.list.addLast(new CityToken(eCity, new City(eCity)));
 
 	}
 
 	public City getCity(ECity eCity) {
-		return this.list.getValue(eCity);
+
+		for (CityToken cityToken : this.list)
+			if (eCity.equals(cityToken.eCity))
+				return cityToken.city;
+
+		ShutDown.INSTANCE.execute();
+		return null;
+
+	}
+
+	private class CityToken {
+
+		public ECity eCity = null;
+		public City city = null;
+
+		public CityToken(ECity eCity, City city) {
+			this.eCity = eCity;
+			this.city = city;
+		}
+
 	}
 
 }

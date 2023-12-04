@@ -1,6 +1,10 @@
 package lists;
 
+import business.Credentials;
 import models.RailroadToken;
+import utils.Enums.DirectionEnum;
+import utils.Enums.RelocateTypeEnum;
+import utils.ListCredentials;
 import utils.ListImageViewAbles;
 
 public enum RailroadTokensPile {
@@ -11,8 +15,12 @@ public enum RailroadTokensPile {
 
 	private RailroadTokensPile() {
 
-		
-		
+		ListCredentials listCredentials = this.list.getListCredentials();
+		listCredentials.coordinatesList = Credentials.INSTANCE.cRailroadTokensPile;
+		listCredentials.relocateTypeEnum = RelocateTypeEnum.BOTTOM_LEFT;
+		listCredentials.directionEnumVertical = DirectionEnum.UP;
+		listCredentials.objectsPerRow = 5;
+
 	}
 
 	public ListImageViewAbles<RailroadToken> getList() {
