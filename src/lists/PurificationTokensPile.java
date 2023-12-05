@@ -1,29 +1,29 @@
 package lists;
 
 import business.Credentials;
-import models.RailroadToken;
+import models.PurificationToken;
 import utils.Enums.DirectionEnum;
 import utils.Enums.RelocateTypeEnum;
 import utils.ListCredentials;
 import utils.ListImageViewAbles;
 
-public enum RailroadTokensPile {
+public enum PurificationTokensPile {
 
 	INSTANCE;
 
-	private ListImageViewAbles<RailroadToken> list = new ListImageViewAbles<>();
+	private ListImageViewAbles<PurificationToken> list = new ListImageViewAbles<>();
 
-	private RailroadTokensPile() {
+	private PurificationTokensPile() {
 
 		ListCredentials listCredentials = this.list.getListCredentials();
-		listCredentials.coordinatesList = Credentials.INSTANCE.cRailroadTokensPile;
+		listCredentials.coordinatesList = Credentials.INSTANCE.cPurificationTokensPile;
 		listCredentials.relocateTypeEnum = RelocateTypeEnum.BOTTOM_LEFT;
 		listCredentials.directionEnumVertical = DirectionEnum.UP;
-		listCredentials.objectsPerRow = 10;
+		listCredentials.objectsPerRow = 7;
 
 	}
 
-	public ListImageViewAbles<RailroadToken> getList() {
+	public ListImageViewAbles<PurificationToken> getList() {
 		return this.list;
 	}
 

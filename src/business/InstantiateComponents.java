@@ -5,9 +5,11 @@ import enums.EColor;
 import lists.DeckInfection;
 import lists.DiseaseCubesSupplyPiles;
 import lists.Map;
+import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import models.CardInfection;
 import models.DiseaseCube;
+import models.PurificationToken;
 import models.RailroadToken;
 import utils.Enums.ListsManager;
 
@@ -21,8 +23,19 @@ public enum InstantiateComponents {
 		diseaseCubes();
 		cardInfection();
 		railroadTokens();
+		purufucationTokens();
 
 		ListsManager.INSTANCE.saveListsOriginal();
+
+	}
+
+	private void purufucationTokens() {
+
+		for (int counter = 1; counter <= 14; counter++)
+			PurificationTokensPile.INSTANCE.getList().getArrayList()
+					.addLast(new PurificationToken());
+
+		PurificationTokensPile.INSTANCE.getList().relocateImageViews();
 
 	}
 
