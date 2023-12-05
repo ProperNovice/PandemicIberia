@@ -2,7 +2,6 @@ package lists;
 
 import enums.ECity;
 import models.CitiesConnection;
-import models.RailroadToken;
 import utils.ArrayList;
 
 public enum CitiesConnectionsPool {
@@ -12,107 +11,110 @@ public enum CitiesConnectionsPool {
 	private ArrayList<CitiesConnection> list = new ArrayList<>();
 
 	private CitiesConnectionsPool() {
-
 		createConnections();
-
-		for (CitiesConnection citiesConnection : this.list)
-			citiesConnection.addRailroadTokenRelocate(new RailroadToken());
-
 	}
 
 	private void createConnections() {
 
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.A_CORUNA, ECity.SANTIAGO_DE_COMPOSTELA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VIGO, ECity.SANTIAGO_DE_COMPOSTELA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.OURENSE, ECity.SANTIAGO_DE_COMPOSTELA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.PORTO, ECity.BRAGA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.PORTO, ECity.COIMBRA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LISBOA, ECity.COIMBRA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.COIMBRA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LISBOA, ECity.EVORA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BADAJOZ, ECity.EVORA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUELVA, ECity.EVORA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUELVA, ECity.SEVILLA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CADIZ, ECity.SEVILLA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CORDOBA, ECity.SEVILLA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CORDOBA, ECity.BADAJOZ);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.BADAJOZ);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.BADAJOZ);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.TOLEDO);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.SALAMANCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BRAGA, ECity.SALAMANCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LEON, ECity.SALAMANCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LEON, ECity.OURENSE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.GIJON, ECity.LEON);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.GIJON, ECity.A_CORUNA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MADRID, ECity.SALAMANCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MADRID, ECity.TOLEDO);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.TOLEDO);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.ALBACETE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.ALBACETE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.CORDOBA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.GRANADA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MALAGA, ECity.GRANADA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALMERIA, ECity.GRANADA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALMERIA, ECity.MALAGA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.SALAMANCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.SANTANDER);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.BURGOS);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.MADRID);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ZARAGOZA, ECity.MADRID);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CUENCA, ECity.MADRID);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VIGO, ECity.BRAGA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CADIZ, ECity.GIBRALTAR);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.BURGOS);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SORIA, ECity.BURGOS);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SORIA, ECity.ZARAGOZA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.BILBAO_BILBO);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SANTANDER, ECity.BILBAO_BILBO);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.A_CORUNA, ECity.SANTIAGO_DE_COMPOSTELA,
+				true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VIGO, ECity.SANTIAGO_DE_COMPOSTELA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.OURENSE, ECity.SANTIAGO_DE_COMPOSTELA,
+				true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.PORTO, ECity.BRAGA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.PORTO, ECity.COIMBRA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LISBOA, ECity.COIMBRA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.COIMBRA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LISBOA, ECity.EVORA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BADAJOZ, ECity.EVORA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUELVA, ECity.EVORA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUELVA, ECity.SEVILLA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CADIZ, ECity.SEVILLA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CORDOBA, ECity.SEVILLA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CORDOBA, ECity.BADAJOZ, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.BADAJOZ, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.BADAJOZ, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.TOLEDO, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CACERES, ECity.SALAMANCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BRAGA, ECity.SALAMANCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LEON, ECity.SALAMANCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.LEON, ECity.OURENSE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.GIJON, ECity.LEON, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.GIJON, ECity.A_CORUNA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MADRID, ECity.SALAMANCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MADRID, ECity.TOLEDO, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.TOLEDO, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CIUDAD_REAL, ECity.ALBACETE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.ALBACETE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.CORDOBA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.JAEN, ECity.GRANADA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.MALAGA, ECity.GRANADA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALMERIA, ECity.GRANADA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALMERIA, ECity.MALAGA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.SALAMANCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.SANTANDER, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.BURGOS, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALLADOLID, ECity.MADRID, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ZARAGOZA, ECity.MADRID, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CUENCA, ECity.MADRID, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VIGO, ECity.BRAGA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CADIZ, ECity.GIBRALTAR, false);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.BURGOS, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SORIA, ECity.BURGOS, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SORIA, ECity.ZARAGOZA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.BILBAO_BILBO,
+				true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SANTANDER, ECity.BILBAO_BILBO, true);
 		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SAN_SEBASTIAN_DONOSTIA,
-				ECity.BILBAO_BILBO);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SAN_SEBASTIAN_DONOSTIA, ECity.PAMPLONA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.PAMPLONA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.ZARAGOZA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.ANDORRA_LA_VELLA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.PAMPLONA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.ZARAGOZA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.ZARAGOZA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.CUENCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.TARRAGONA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALBACETE, ECity.CUENCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.CUENCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.ALBACETE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.ALICANTE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CARTAGENA, ECity.ALBACETE);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BARCELONA, ECity.PALMA_DE_MALLORCA);
-		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BARCELONA, ECity.ZARAGOZA);
+				ECity.BILBAO_BILBO, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.SAN_SEBASTIAN_DONOSTIA, ECity.PAMPLONA,
+				true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.PAMPLONA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.ZARAGOZA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.HUESCA, ECity.ANDORRA_LA_VELLA, false);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.PAMPLONA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VITORIA_GASTEIZ, ECity.ZARAGOZA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.ZARAGOZA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.CUENCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.TERUEL, ECity.TARRAGONA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.ALBACETE, ECity.CUENCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.CUENCA, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.ALBACETE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.VALENCIA, ECity.ALICANTE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.CARTAGENA, ECity.ALBACETE, true);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BARCELONA, ECity.PALMA_DE_MALLORCA,
+				false);
+		addCitiesConnectionCanBuildRailroadNoOffset(ECity.BARCELONA, ECity.ZARAGOZA, true);
 
-		addCitiesConnectionCanBuildRailroadOffset(ECity.VALENCIA, ECity.PALMA_DE_MALLORCA, 0, -10);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.BARCELONA, ECity.GIRONA, -10, -10);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.ANDORRA_LA_VELLA, ECity.GIRONA, 0, 20);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.BARCELONA, ECity.TARRAGONA, 0, -10);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.VALENCIA, ECity.TARRAGONA, -20, 0);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.CARTAGENA, ECity.ALICANTE, -10, 0);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.MADRID, ECity.CIUDAD_REAL, 30, 0);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.GIJON, ECity.SANTANDER, -10, 30);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.PORTO, ECity.LISBOA, 15, 0);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.ALBUFEIRA, ECity.LISBOA, 21, 0);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.ALBUFEIRA, ECity.HUELVA, 0, -10);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.SEVILLA, ECity.MALAGA, 0, 8);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.GIBRALTAR, ECity.MALAGA, -15, -15);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.ALMERIA, ECity.CARTAGENA, -24, -24);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.VIGO, ECity.OURENSE, 0, 8);
-		addCitiesConnectionCanBuildRailroadOffset(ECity.VIGO, ECity.PORTO, 4, 0);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.VALENCIA, ECity.PALMA_DE_MALLORCA, 0, -10,
+				false);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.BARCELONA, ECity.GIRONA, -10, -10, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.ANDORRA_LA_VELLA, ECity.GIRONA, 0, 20,
+				false);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.BARCELONA, ECity.TARRAGONA, 0, -10, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.VALENCIA, ECity.TARRAGONA, -20, 0, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.CARTAGENA, ECity.ALICANTE, -10, 0, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.MADRID, ECity.CIUDAD_REAL, 30, 0, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.GIJON, ECity.SANTANDER, -10, 30, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.PORTO, ECity.LISBOA, 15, 0, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.ALBUFEIRA, ECity.LISBOA, 21, 0, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.ALBUFEIRA, ECity.HUELVA, 0, -10, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.SEVILLA, ECity.MALAGA, 0, 8, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.GIBRALTAR, ECity.MALAGA, -15, -15, false);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.ALMERIA, ECity.CARTAGENA, -24, -24, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.VIGO, ECity.OURENSE, 0, 8, true);
+		addCitiesConnectionCanBuildRailroadOffset(ECity.VIGO, ECity.PORTO, 4, 0, true);
 
 	}
 
-	private void addCitiesConnectionCanBuildRailroadNoOffset(ECity eCityA, ECity eCityB) {
-		this.list.addLast(new CitiesConnection(eCityA, eCityB, true));
+	private void addCitiesConnectionCanBuildRailroadNoOffset(ECity eCityA, ECity eCityB,
+			boolean canBuildRailroad) {
+		this.list.addLast(new CitiesConnection(eCityA, eCityB, canBuildRailroad));
 	}
 
 	private void addCitiesConnectionCanBuildRailroadOffset(ECity eCityA, ECity eCityB,
-			double offSetX, double offSetY) {
-		this.list.addLast(new CitiesConnection(eCityA, eCityB, offSetX, offSetY, true));
+			double offSetX, double offSetY, boolean canBuildRailroad) {
+		this.list.addLast(new CitiesConnection(eCityA, eCityB, offSetX, offSetY, canBuildRailroad));
 	}
 
 }
