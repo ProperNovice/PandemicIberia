@@ -16,10 +16,9 @@ public enum Credentials {
 	public Vector2 cTextPanel, cImageViewClone;
 	public RearrangeTypeEnum rearrangeTypeEnumText = RearrangeTypeEnum.LINEAR;
 
-	public Vector2 dMap, dDiseaseCube, dGapBetweenDiseaseCubes, dRailroadToken, dPurificationToken,
-			dCardPlayer;
-	public Vector2 cMap, cDiseaseCubePileFirst, cInfectionDeck, cInfectionDiscardPile,
-			cRailroadTokensPile, cPurificationTokensPile;
+	public Vector2 dMap, dDiseaseCube, dGapBetweenDiseaseCubes, dRailroadToken, dPurificationToken;
+	public Vector2 cMap, cDiseaseCubePileFirst, cCardInfectionDeck, cCardInfectionDiscardPile,
+			cRailroadTokensPile, cPurificationTokensPile, cCardPlayerDeck, cCardPlayerDiscardPile;
 
 	private Credentials() {
 
@@ -27,7 +26,7 @@ public enum Credentials {
 
 		// frame
 
-		this.dFrame = new Vector2(2560 - 4 - 636 + 636, 1368);
+		this.dFrame = new Vector2(2560 - 4 - 636 - 2 + 636, 1368);
 
 		// gaps
 
@@ -90,7 +89,7 @@ public enum Credentials {
 		x += 1373;
 		y = this.cMap.y;
 		y += 143;
-		this.cInfectionDeck = new Vector2(x, y);
+		this.cCardInfectionDeck = new Vector2(x, y);
 
 		// c infection discard pile
 
@@ -98,7 +97,7 @@ public enum Credentials {
 		x += 1706;
 		y = this.cMap.y;
 		y += 143;
-		this.cInfectionDiscardPile = new Vector2(x, y);
+		this.cCardInfectionDiscardPile = new Vector2(x, y);
 
 		// c railroad tokens pile
 
@@ -127,15 +126,21 @@ public enum Credentials {
 		y -= this.dGapBetweenComponents.y;
 		this.cPurificationTokensPile = new Vector2(x, y);
 
-		// d card player
+		// c card player deck
 
-		x = this.dFrame.x;
-		x -= this.dMap.x;
-		x -= 2 * this.gapBetweenBorders;
-		x -= 4 * this.dGapBetweenComponents.x;
-		x /= 4;
-		y = 731 * x / 509;
-		this.dCardPlayer = new Vector2(x, y);
+		x = this.cMap.x;
+		x += 1488;
+		y = this.cMap.y;
+		y += 1163;
+		this.cCardPlayerDeck = new Vector2(x, y);
+
+		// c card player discard pile
+
+		x = this.cMap.x;
+		x += 1745;
+		y = this.cMap.y;
+		y += 1163;
+		this.cCardPlayerDiscardPile = new Vector2(x, y);
 
 	}
 

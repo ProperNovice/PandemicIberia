@@ -18,7 +18,7 @@ public enum DeckInfection {
 
 		ListCredentials listCredentials = this.list.getListCredentials();
 
-		listCredentials.coordinatesList = Credentials.INSTANCE.cInfectionDeck;
+		listCredentials.coordinatesList = Credentials.INSTANCE.cCardInfectionDeck;
 		listCredentials.relocateTypeEnum = RelocateTypeEnum.CENTER;
 		listCredentials.rearrangeTypeEnum = RearrangeTypeEnum.STATIC;
 		listCredentials.layerZListEnum = LayerZListEnum.TO_FRONT_FIRST_IMAGEVIEW;

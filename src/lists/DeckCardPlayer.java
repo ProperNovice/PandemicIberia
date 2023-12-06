@@ -1,31 +1,32 @@
 package lists;
 
 import business.Credentials;
-import models.CardInfection;
+import models.CardPlayer;
 import utils.Enums.LayerZListEnum;
 import utils.Enums.RearrangeTypeEnum;
 import utils.Enums.RelocateTypeEnum;
 import utils.ListCredentials;
 import utils.ListImageViewAbles;
 
-public enum DiscardPileInfection {
+public enum DeckCardPlayer {
 
 	INSTANCE;
 
-	private ListImageViewAbles<CardInfection> list = new ListImageViewAbles<>();
+	private ListImageViewAbles<CardPlayer> list = new ListImageViewAbles<>();
 
-	private DiscardPileInfection() {
+	private DeckCardPlayer() {
 
 		ListCredentials listCredentials = this.list.getListCredentials();
 
-		listCredentials.coordinatesList = Credentials.INSTANCE.cCardInfectionDiscardPile;
+		listCredentials.coordinatesList = Credentials.INSTANCE.cCardPlayerDeck;
 		listCredentials.relocateTypeEnum = RelocateTypeEnum.CENTER;
 		listCredentials.rearrangeTypeEnum = RearrangeTypeEnum.STATIC;
 		listCredentials.layerZListEnum = LayerZListEnum.TO_FRONT_FIRST_IMAGEVIEW;
+		listCredentials.showListSize = true;
 
 	}
 
-	public ListImageViewAbles<CardInfection> getList() {
+	public ListImageViewAbles<CardPlayer> getList() {
 		return this.list;
 	}
 

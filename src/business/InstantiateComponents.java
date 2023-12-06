@@ -3,6 +3,7 @@ package business;
 import enums.ECity;
 import enums.EColor;
 import lists.CitiesConnectionsPool;
+import lists.DeckCardPlayer;
 import lists.DeckInfection;
 import lists.DiseaseCubesPiles;
 import lists.Map;
@@ -10,6 +11,7 @@ import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import lists.RegionPool;
 import models.CardInfection;
+import models.CardPlayerCity;
 import models.DiseaseCube;
 import models.PurificationToken;
 import models.RailroadToken;
@@ -26,11 +28,21 @@ public enum InstantiateComponents {
 		cardInfection();
 		railroadTokens();
 		purufucationTokens();
+		deckCardPlayer();
 
 		CitiesConnectionsPool.values();
 		RegionPool.values();
 
 		ListsManager.INSTANCE.saveListsOriginal();
+
+	}
+
+	private void deckCardPlayer() {
+
+		for (ECity eCity : ECity.values())
+			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerCity(eCity));
+
+		DeckCardPlayer.INSTANCE.getList().relocateImageViews();
 
 	}
 
