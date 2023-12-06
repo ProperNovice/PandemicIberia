@@ -4,7 +4,7 @@ import enums.ECity;
 import enums.EColor;
 import lists.CitiesConnectionsPool;
 import lists.DeckInfection;
-import lists.DiseaseCubesSupplyPiles;
+import lists.DiseaseCubesPiles;
 import lists.Map;
 import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
@@ -66,11 +66,11 @@ public enum InstantiateComponents {
 
 		for (int counter = 1; counter <= 24; counter++)
 			for (EColor eColor : EColor.values())
-				DiseaseCubesSupplyPiles.INSTANCE.getList(eColor).getArrayList()
+				DiseaseCubesPiles.INSTANCE.getList(eColor).getArrayList()
 						.addLast(new DiseaseCube(eColor));
 
 		for (EColor eColor : EColor.values())
-			DiseaseCubesSupplyPiles.INSTANCE.getList(eColor).relocateImageViews();
+			DiseaseCubesPiles.INSTANCE.getList(eColor).relocateImageViews();
 
 	}
 

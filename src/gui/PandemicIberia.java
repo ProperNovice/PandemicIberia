@@ -13,16 +13,14 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import utils.Animation;
-import utils.AnimationTimerFX;
 import utils.Flow;
-import utils.Interfaces.IUpdateAble;
 import utils.Logger;
 import utils.ObjectPool;
 import utils.ShutDown;
 import utils.TextManager;
 import utils.Vector2;
 
-public class PandemicIberia extends Application implements IUpdateAble {
+public class PandemicIberia extends Application {
 
 	private Vector2 dimensionsInsets = new Vector2(16, 39);
 
@@ -38,13 +36,8 @@ public class PandemicIberia extends Application implements IUpdateAble {
 		long end = System.currentTimeMillis();
 		Logger.INSTANCE.logNewLine((end - start) + "ms");
 
-		AnimationTimerFX.INSTANCE.updateNextFrame(this);
-
-	}
-
-	@Override
-	public void update() {
 		Flow.INSTANCE.executeGameState(JUnit.class);
+
 	}
 
 	private void logJavaVersion() {

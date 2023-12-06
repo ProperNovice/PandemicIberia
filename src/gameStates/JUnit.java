@@ -1,15 +1,18 @@
 package gameStates;
 
+import business.Credentials;
 import enums.ECity;
 import gameStatesDefault.GameState;
-import models.CardCity;
+import models.CardPlayerCity;
 
 public class JUnit extends GameState {
 
 	@Override
 	public void execute() {
-		
-		System.out.println(new CardCity(ECity.CARTAGENA).getECity());
+
+		new CardPlayerCity(ECity.CARTAGENA).getImageView()
+				.relocateTopLeft(Credentials.INSTANCE.dMap.x + 10 + 4, 10);
+		;
 
 	}
 

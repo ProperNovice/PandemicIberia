@@ -2,11 +2,11 @@ package models;
 
 import enums.ECity;
 
-public class CardCity extends CardPlayer {
+public class CardPlayerCity extends CardPlayer {
 
 	private ECity eCity = null;
 
-	public CardCity(ECity eCity) {
+	public CardPlayerCity(ECity eCity) {
 
 		this.eCity = eCity;
 		super.createCard();

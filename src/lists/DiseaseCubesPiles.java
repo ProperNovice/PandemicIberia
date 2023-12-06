@@ -8,18 +8,18 @@ import utils.HashMap;
 import utils.ListImageViewAbles;
 import utils.Vector2;
 
-public enum DiseaseCubesSupplyPiles {
+public enum DiseaseCubesPiles {
 
 	INSTANCE;
 
 	private HashMap<EColor, ListImageViewAbles<DiseaseCube>> list = new HashMap<>();
 
-	private DiseaseCubesSupplyPiles() {
+	private DiseaseCubesPiles() {
 
 		ArrayList<EColor> listEColors = new ArrayList<>(EColor.values());
 		EColor eColor = null;
 		ListImageViewAbles<DiseaseCube> list = null;
-		Vector2 coordinates = Credentials.INSTANCE.cDiseaseCubeSupplyPileFirst;
+		Vector2 coordinates = Credentials.INSTANCE.cDiseaseCubePileFirst;
 
 		// first
 
