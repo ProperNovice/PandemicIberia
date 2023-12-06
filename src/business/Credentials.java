@@ -59,7 +59,8 @@ public enum Credentials {
 		// c map
 
 		x = this.gapBetweenBorders;
-		this.cMap = new Vector2(x, x);
+		y = this.gapBetweenBorders;
+		this.cMap = new Vector2(x, y);
 
 		// d disease cube
 
