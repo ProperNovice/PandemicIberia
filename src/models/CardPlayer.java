@@ -9,6 +9,7 @@ public abstract class CardPlayer implements IImageViewAble {
 	protected final void createCard() {
 
 		new ImageView(getFilePath(), ELayerZ.CARDS, this);
+		getImageView().setVisible(false);
 
 	}
 
