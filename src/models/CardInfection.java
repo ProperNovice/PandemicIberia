@@ -17,9 +17,7 @@ public class CardInfection implements IImageViewAble {
 		fileName += this.eCity;
 		fileName += ".jpg";
 		new ImageView(fileName, ELayerZ.CARDS, this);
-
-		getImageView().setBack("cards/infection/back.jpg");
-		getImageView().flip();
+		getImageView().setVisible(false);
 
 	}
 
