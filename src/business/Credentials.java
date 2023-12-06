@@ -40,7 +40,9 @@ public enum Credentials {
 		// c text panel
 
 		x = 0;
+		x = 2000;
 		y = 0;
+		y = 50;
 
 		this.cTextPanel = new Vector2(x, y);
 

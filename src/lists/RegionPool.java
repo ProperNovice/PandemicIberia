@@ -23,8 +23,8 @@ public enum RegionPool {
 		this.list.addLast(new Region(350, 269, ECity.A_CORUNA, ECity.GIJON, ECity.LEON,
 				ECity.OURENSE, ECity.SANTIAGO_DE_COMPOSTELA));
 
-		this.list.addLast(new Region(229, 343, ECity.VIGO, ECity.LEON, ECity.OURENSE,
-				ECity.SANTIAGO_DE_COMPOSTELA));
+		this.list.addLast(
+				new Region(229, 343, ECity.VIGO, ECity.OURENSE, ECity.SANTIAGO_DE_COMPOSTELA));
 
 		this.list.addLast(new Region(399, 424, ECity.VIGO, ECity.LEON, ECity.OURENSE,
 				ECity.SALAMANCA, ECity.BRAGA));
@@ -82,10 +82,10 @@ public enum RegionPool {
 		this.list.addLast(
 				new Region(912, 623, ECity.CUENCA, ECity.TERUEL, ECity.ZARAGOZA, ECity.MADRID));
 
-		this.list.addLast(new Region(690, 762, ECity.CUENCA, ECity.CIUDAD_REAL, ECity.ALBACETE,
+		this.list.addLast(new Region(833, 780, ECity.CUENCA, ECity.CIUDAD_REAL, ECity.ALBACETE,
 				ECity.MADRID));
 
-		this.list.addLast(new Region(827, 783, ECity.TOLEDO, ECity.CIUDAD_REAL, ECity.MADRID));
+		this.list.addLast(new Region(688, 754, ECity.TOLEDO, ECity.CIUDAD_REAL, ECity.MADRID));
 
 		this.list.addLast(
 				new Region(773, 930, ECity.JAEN, ECity.CIUDAD_REAL, ECity.ALBACETE, ECity.CORDOBA));
