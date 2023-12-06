@@ -2,11 +2,13 @@ package business;
 
 import enums.ECity;
 import enums.EColor;
+import lists.CitiesConnectionsPool;
 import lists.DeckInfection;
 import lists.DiseaseCubesSupplyPiles;
 import lists.Map;
 import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
+import lists.RegionPool;
 import models.CardInfection;
 import models.DiseaseCube;
 import models.PurificationToken;
@@ -24,6 +26,9 @@ public enum InstantiateComponents {
 		cardInfection();
 		railroadTokens();
 		purufucationTokens();
+
+		CitiesConnectionsPool.values();
+		RegionPool.values();
 
 		ListsManager.INSTANCE.saveListsOriginal();
 
