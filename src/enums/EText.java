@@ -12,6 +12,7 @@ public enum EText {
 	VOID("", TextTypeEnum.INDICATOR),
 	YOU_LOST("You lost", TextTypeEnum.INDICATOR),
 	YOU_WON("You won", TextTypeEnum.INDICATOR),
+	INFECT_STARTING_CITIES("Infect starting cities", TextTypeEnum.INDICATOR),
 
 	;
 
