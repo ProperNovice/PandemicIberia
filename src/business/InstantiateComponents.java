@@ -6,7 +6,9 @@ import lists.CitiesConnectionsPool;
 import lists.DeckCardPlayer;
 import lists.DeckInfection;
 import lists.DiseaseCubesPiles;
+import lists.InfectionRateTrack;
 import lists.Map;
+import lists.OutbreaksTrack;
 import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import lists.RegionPool;
@@ -24,14 +26,16 @@ public enum InstantiateComponents {
 	private InstantiateComponents() {
 
 		Map.values();
+		CitiesConnectionsPool.values();
+		RegionPool.values();
+		OutbreaksTrack.values();
+		InfectionRateTrack.values();
+
 		diseaseCubes();
 		cardInfection();
 		railroadTokens();
 		purufucationTokens();
 		deckCardPlayer();
-
-		CitiesConnectionsPool.values();
-		RegionPool.values();
 
 		ListsManager.INSTANCE.saveListsOriginal();
 

@@ -4,9 +4,11 @@ import business.Credentials;
 import enums.ECity;
 import utils.Enums.RearrangeTypeEnum;
 import utils.Enums.RelocateTypeEnum;
+import utils.Interfaces.ISelectCoordinatesAble;
 import utils.ListImageViewAbles;
+import utils.Vector2;
 
-public class City {
+public class City implements ISelectCoordinatesAble {
 
 	private ListImageViewAbles<DiseaseCube> listDiseaseCubes = new ListImageViewAbles<>();
 
@@ -25,6 +27,11 @@ public class City {
 
 	public ListImageViewAbles<DiseaseCube> getListCubes() {
 		return this.listDiseaseCubes;
+	}
+
+	@Override
+	public Vector2 getCoordinatesCenter() {
+		return this.listDiseaseCubes.getListCredentials().coordinatesList;
 	}
 
 }
