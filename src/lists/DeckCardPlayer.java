@@ -1,6 +1,6 @@
 package lists;
 
-import business.Credentials;
+import controller.Credentials;
 import models.CardPlayer;
 import utils.Enums.LayerZListEnum;
 import utils.Enums.RearrangeTypeEnum;

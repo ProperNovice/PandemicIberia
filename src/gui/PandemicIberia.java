@@ -1,7 +1,7 @@
 package gui;
 
-import business.Credentials;
-import business.InstantiateComponents;
+import controller.Credentials;
+import controller.InstantiateComponents;
 import gameStates.JUnit;
 import gameStatesDefault.RestartGame;
 import javafx.application.Application;

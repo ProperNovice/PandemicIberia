@@ -1,6 +1,6 @@
 package lists;
 
-import business.Credentials;
+import controller.Credentials;
 import models.InfectionRateToken;
 import utils.ArrayList;
 import utils.Vector2;

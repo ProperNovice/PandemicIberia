@@ -1,10 +1,10 @@
 package utils;
 
+import controller.Credentials;
 import utils.Enums.DirectionEnum;
 import utils.Enums.LayerZListEnum;
 import utils.Enums.RearrangeTypeEnum;
 import utils.Enums.RelocateTypeEnum;
-import business.Credentials;
 
 public class ListCredentials {
 

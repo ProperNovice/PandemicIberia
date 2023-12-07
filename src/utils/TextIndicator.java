@@ -1,6 +1,6 @@
 package utils;
 
-import business.Credentials;
+import controller.Credentials;
 import gui.InstancesGui;
 import javafx.scene.text.Font;
 import utils.Interfaces.INode;

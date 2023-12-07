@@ -1,6 +1,6 @@
 package gameStatesDefault;
 
-import business.Credentials;
+import controller.Credentials;
 import enums.EText;
 import javafx.scene.input.KeyCode;
 import utils.ArrayList;

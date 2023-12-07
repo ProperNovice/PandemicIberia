@@ -1,6 +1,6 @@
 package lists;
 
-import business.Credentials;
+import controller.Credentials;
 import models.RailroadToken;
 import utils.Enums.DirectionEnum;
 import utils.Enums.RelocateTypeEnum;

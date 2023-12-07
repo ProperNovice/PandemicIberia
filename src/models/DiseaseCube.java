@@ -1,6 +1,6 @@
 package models;
 
-import business.Credentials;
+import controller.Credentials;
 import enums.EColor;
 import enums.ELayerZ;
 import utils.ImageView;

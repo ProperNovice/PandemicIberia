@@ -1,6 +1,6 @@
 package models;
 
-import business.Credentials;
+import controller.Credentials;
 import enums.ECity;
 import utils.ArrayList;
 import utils.Enums.RearrangeTypeEnum;

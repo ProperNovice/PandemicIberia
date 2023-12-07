@@ -1,6 +1,6 @@
 package lists;
 
-import business.Credentials;
+import controller.Credentials;
 import models.OutbreakMarker;
 import utils.HashMap;
 import utils.Vector2;

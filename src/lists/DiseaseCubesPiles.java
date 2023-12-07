@@ -1,6 +1,6 @@
 package lists;
 
-import business.Credentials;
+import controller.Credentials;
 import enums.EColor;
 import models.DiseaseCube;
 import utils.ArrayList;
