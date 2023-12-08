@@ -16,7 +16,12 @@ public enum DiseaseCubesPiles {
 
 	private DiseaseCubesPiles() {
 
-		ArrayList<EColor> listEColors = new ArrayList<>(EColor.values());
+		ArrayList<EColor> listEColors = new ArrayList<>();
+		listEColors.addLast(EColor.BLACK);
+		listEColors.addLast(EColor.BLUE);
+		listEColors.addLast(EColor.RED);
+		listEColors.addLast(EColor.YELLOW);
+
 		EColor eColor = null;
 		ListImageViewAbles<DiseaseCube> list = null;
 		Vector2 coordinates = Credentials.INSTANCE.cDiseaseCubePileFirst;

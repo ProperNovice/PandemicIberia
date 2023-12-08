@@ -38,15 +38,6 @@ public enum Credentials {
 
 		this.dCameraView = new Vector2(1, 1);
 
-		// c text panel
-
-		x = 0;
-		x = 2000;
-		y = 0;
-		y = 50;
-
-		this.cTextPanel = new Vector2(x, y);
-
 		// c image view indicator
 
 		x = this.gapBetweenBorders;
@@ -64,6 +55,15 @@ public enum Credentials {
 		x = this.gapBetweenBorders;
 		y = this.gapBetweenBorders;
 		this.cMap = new Vector2(x, y);
+
+		// c text panel
+
+		x = this.cMap.x;
+		x += this.dMap.x;
+		x += this.dGapBetweenComponents.x;
+		y = this.gapBetweenBorders;
+
+		this.cTextPanel = new Vector2(x, y);
 
 		// d disease cube
 

@@ -49,7 +49,7 @@ public enum InstantiateComponents {
 	}
 
 	private void deckCardPlayer() {
-		
+
 		ArrayList<CardPlayer> list = DeckCardPlayer.INSTANCE.getList().getArrayList();
 
 		for (ECity eCity : ECity.values())
@@ -95,12 +95,18 @@ public enum InstantiateComponents {
 
 	private void diseaseCubes() {
 
+		ArrayList<EColor> listEColors = new ArrayList<>();
+		listEColors.addLast(EColor.BLACK);
+		listEColors.addLast(EColor.BLUE);
+		listEColors.addLast(EColor.RED);
+		listEColors.addLast(EColor.YELLOW);
+
 		for (int counter = 1; counter <= 24; counter++)
-			for (EColor eColor : EColor.values())
+			for (EColor eColor : listEColors)
 				DiseaseCubesPiles.INSTANCE.getList(eColor).getArrayList()
 						.addLast(new DiseaseCube(eColor));
 
-		for (EColor eColor : EColor.values())
+		for (EColor eColor : listEColors)
 			DiseaseCubesPiles.INSTANCE.getList(eColor).relocateImageViews();
 
 	}
