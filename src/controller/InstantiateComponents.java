@@ -2,6 +2,7 @@ package controller;
 
 import enums.ECity;
 import enums.EColor;
+import enums.EEvent;
 import lists.CitiesConnectionsPool;
 import lists.DeckCardPlayer;
 import lists.DeckInfection;
@@ -15,6 +16,8 @@ import lists.RailroadTokensPile;
 import lists.RegionPool;
 import models.CardInfection;
 import models.CardPlayerCity;
+import models.CardPlayerEpidemic;
+import models.CardPlayerEvent;
 import models.DiseaseCube;
 import models.PurificationToken;
 import models.RailroadToken;
@@ -36,7 +39,7 @@ public enum InstantiateComponents {
 		diseaseCubes();
 		cardInfection();
 		railroadTokens();
-		purufucationTokens();
+		purifucationTokens();
 		deckCardPlayer();
 
 		ListsManager.INSTANCE.saveListsOriginal();
@@ -48,11 +51,17 @@ public enum InstantiateComponents {
 		for (ECity eCity : ECity.values())
 			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerCity(eCity));
 
+		for (EEvent eEvent : EEvent.values())
+			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerEvent(eEvent));
+
+		for (int counter = 1; counter <= 6; counter++)
+			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerEpidemic());
+
 		DeckCardPlayer.INSTANCE.getList().relocateImageViews();
 
 	}
 
-	private void purufucationTokens() {
+	private void purifucationTokens() {
 
 		for (int counter = 1; counter <= 14; counter++)
 			PurificationTokensPile.INSTANCE.getList().getArrayList()
