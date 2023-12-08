@@ -5,13 +5,13 @@ import models.City;
 import utils.ArrayList;
 import utils.ShutDown;
 
-public enum Cities {
+public enum CitiesPool {
 
 	INSTANCE;
 
 	private ArrayList<CityToken> list = new ArrayList<>();
 
-	private Cities() {
+	private CitiesPool() {
 
 		for (ECity eCity : ECity.values())
 			this.list.addLast(new CityToken(eCity, new City(eCity)));

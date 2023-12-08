@@ -4,6 +4,7 @@ import enums.ECity;
 import enums.EColor;
 import enums.EEvent;
 import lists.CitiesConnectionsPool;
+import lists.CitiesPool;
 import lists.DeckCardPlayer;
 import lists.DeckInfection;
 import lists.DiseaseCubesPiles;
@@ -14,6 +15,7 @@ import lists.PawnPool;
 import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import lists.RegionPool;
+import lists.RolePool;
 import models.CardInfection;
 import models.CardPlayer;
 import models.CardPlayerCity;
@@ -37,6 +39,8 @@ public enum InstantiateComponents {
 		OutbreaksTrack.values();
 		InfectionRateTrack.values();
 		PawnPool.values();
+		RolePool.values();
+		CitiesPool.values();
 
 		diseaseCubes();
 		cardInfection();

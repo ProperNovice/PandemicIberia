@@ -2,7 +2,7 @@ package business;
 
 import enums.ECity;
 import enums.EColor;
-import lists.Cities;
+import lists.CitiesPool;
 import lists.DeckInfection;
 import lists.DiscardPileInfection;
 import lists.DiseaseCubesPiles;
@@ -23,7 +23,7 @@ public class InfectCity {
 		DiscardPileInfection.INSTANCE.getList().animateSynchronous();
 
 		ECity eCity = cardInfection.getECity();
-		City city = Cities.INSTANCE.getCity(eCity);
+		City city = CitiesPool.INSTANCE.getCity(eCity);
 		EColor eColor = eCity.getEColor();
 
 		ArrayList<DiseaseCube> list = new ArrayList<>();
