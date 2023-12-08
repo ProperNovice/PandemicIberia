@@ -15,12 +15,14 @@ import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import lists.RegionPool;
 import models.CardInfection;
+import models.CardPlayer;
 import models.CardPlayerCity;
 import models.CardPlayerEpidemic;
 import models.CardPlayerEvent;
 import models.DiseaseCube;
 import models.PurificationToken;
 import models.RailroadToken;
+import utils.ArrayList;
 import utils.Enums.ListsManager;
 
 public enum InstantiateComponents {
@@ -47,15 +49,17 @@ public enum InstantiateComponents {
 	}
 
 	private void deckCardPlayer() {
+		
+		ArrayList<CardPlayer> list = DeckCardPlayer.INSTANCE.getList().getArrayList();
 
 		for (ECity eCity : ECity.values())
-			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerCity(eCity));
+			list.addLast(new CardPlayerCity(eCity));
 
 		for (EEvent eEvent : EEvent.values())
-			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerEvent(eEvent));
+			list.addLast(new CardPlayerEvent(eEvent));
 
 		for (int counter = 1; counter <= 6; counter++)
-			DeckCardPlayer.INSTANCE.getList().getArrayList().addLast(new CardPlayerEpidemic());
+			list.addLast(new CardPlayerEpidemic());
 
 		DeckCardPlayer.INSTANCE.getList().relocateImageViews();
 
