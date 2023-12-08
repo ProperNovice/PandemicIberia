@@ -9,6 +9,7 @@ import lists.DiseaseCubesPiles;
 import lists.InfectionRateTrack;
 import lists.Map;
 import lists.OutbreaksTrack;
+import lists.PawnPool;
 import lists.PurificationTokensPile;
 import lists.RailroadTokensPile;
 import lists.RegionPool;
@@ -30,6 +31,7 @@ public enum InstantiateComponents {
 		RegionPool.values();
 		OutbreaksTrack.values();
 		InfectionRateTrack.values();
+		PawnPool.values();
 
 		diseaseCubes();
 		cardInfection();
